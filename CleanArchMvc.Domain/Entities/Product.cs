@@ -1,4 +1,4 @@
-﻿namespace CleanArchMvc.Domain.Entities
+﻿  namespace CleanArchMvc.Domain.Entities
 {
     public sealed class Product
     {
