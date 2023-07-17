@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace CleanArchMvc.Domain.Entities
 {
-    internal class Entity
+    public abstract class Entity
     {
+        public int Id { get; protected set; }    
     }
 }
