@@ -22,33 +22,27 @@ namespace CleanArchMvc.Application.Services
         }
         public async Task<IEnumerable<ProductDTO>> GetProducts()
         {
-            var productsEntity = await _productRepository.GetProductsAsync();
-            return _mapper.Map<IEnumerable<ProductDTO>>(productsEntity);
+            return _mapper.Map<IEnumerable<ProductDTO>>(await _productRepository.GetProductsAsync());
         }
         public async Task<ProductDTO> GetById(int? id)
         {
-            var productEntity = await _productRepository.GetByIdAsync(id);
-            return _mapper.Map<ProductDTO>(productEntity);
+            return _mapper.Map<ProductDTO>(await _productRepository.GetByIdAsync(id));
         }
         public async Task<ProductDTO> GetProductCategory(int? id)
         {
-            var productEntity = await _productRepository.GetProductCategoryAsync(id);
-            return _mapper.Map<ProductDTO>(productEntity);
+            return _mapper.Map<ProductDTO>(await _productRepository.GetProductCategoryAsync(id));
         }
         public async Task Add(ProductDTO productDTO)
         {
-            var productEntity = _mapper.Map<Product>(productDTO);
-            await _productRepository.Create(productEntity);
+            await _productRepository.Create(_mapper.Map<Product>(productDTO));
         }
         public async Task Update(ProductDTO productDTO)
         {
-            var productEntity = _mapper.Map<Product>(productDTO);
-            await _productRepository.Update(productEntity);
+            await _productRepository.Update(_mapper.Map<Product>(productDTO));
         }
         public async Task Remove(int? id)
         {
-            var productEntity = _productRepository.GetByIdAsync(id).Result;
-            await _productRepository.Remove(productEntity);
+            await _productRepository.Remove(_productRepository.GetByIdAsync(id).Result);
         }
     }
 }
