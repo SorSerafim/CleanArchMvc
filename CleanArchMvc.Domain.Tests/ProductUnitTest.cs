@@ -57,6 +57,7 @@ namespace CleanArchMvc.Domain.Tests
 
         //description
 
+        [Fact]
         public void CreateProduct_WithNullDescriptionValue_ExceptionDomaindInvalidName()
         {
             Action action = () => new Product(1, "Product Name", null, 9.99m, 99, "Product Image");
