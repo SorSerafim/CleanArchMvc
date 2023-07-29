@@ -25,7 +25,7 @@ namespace CleanArchMvc.Infra.Ioc
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
 
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddAutoMapper(typeof(DomainToDTOMappingProfile));
 
             return services;
         }
