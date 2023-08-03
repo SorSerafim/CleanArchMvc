@@ -32,16 +32,16 @@ namespace CleanArchMvc.Application.Services
 
         public async Task Add(CategoryDTO categoryDTO)
         {
-            await _categoryRepository.Create(_mapper.Map<Category>(categoryDTO));
+            await _categoryRepository.CreateAsync(_mapper.Map<Category>(categoryDTO));
         }
         public async Task Update(CategoryDTO categoryDTO)
         {
-            await _categoryRepository.Update(_mapper.Map<Category>(categoryDTO));
+            await _categoryRepository.UpdateAsync(_mapper.Map<Category>(categoryDTO));
         }
 
         public async Task Remove(int? id)
         {
-            await _categoryRepository.Remove(_categoryRepository.GetByIdAsync(id).Result);
+            await _categoryRepository.RemoveAsync(_categoryRepository.GetByIdAsync(id).Result);
         }        
     }
 }
