@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CleanArchMvc.Application.Products.Handlers
 {
-    internal class ProductCreateCommandHandler : IRequestHandler<ProductCreateCommand, Product>
+    public class ProductCreateCommandHandler : IRequestHandler<ProductCreateCommand, Product>
     {
         private readonly IProductRepository _productRepository;
         public ProductCreateCommandHandler(IProductRepository productRepository)
