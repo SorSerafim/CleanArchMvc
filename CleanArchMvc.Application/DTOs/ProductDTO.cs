@@ -23,8 +23,8 @@ namespace CleanArchMvc.Application.DTOs
         public string Description { get; set; }
 
         [Required(ErrorMessage = "The Price is Required")]
-        [Column(TypeName = "decimal(18,2)")]
-        [DisplayFormat(DataFormatString = "decimal{0:C2}")]
+        [Column(TypeName = "(18,2)")]
+        [DisplayFormat(DataFormatString = "{0:C2}")]
         [DataType(DataType.Currency)]
         [DisplayName("Price")]
         public decimal Price { get; set; }
