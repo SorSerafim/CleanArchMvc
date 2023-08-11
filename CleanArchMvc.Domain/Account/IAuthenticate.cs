@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchMvc.Infra.Data.Identity
+namespace CleanArchMvc.Domain.Account
 {
-    internal class Class1
+    internal interface IAuthenticate
     {
     }
 }
