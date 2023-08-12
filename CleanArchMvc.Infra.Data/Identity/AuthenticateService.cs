@@ -8,11 +8,13 @@ namespace CleanArchMvc.Infra.Data.Identity
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
+
         public AuthenticateService(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
         }
+
         public async Task<bool> Authenticate(string email, string password)
         {
             var result = await _signInManager.PasswordSignInAsync(email, password, false, false);

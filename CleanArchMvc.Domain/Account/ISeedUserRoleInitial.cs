@@ -8,6 +8,7 @@ namespace CleanArchMvc.Domain.Account
 {
     public interface ISeedUserRoleInitial
     {
-
+        public void SeedUsers();
+        public void SeedRoles();
     }
 }
