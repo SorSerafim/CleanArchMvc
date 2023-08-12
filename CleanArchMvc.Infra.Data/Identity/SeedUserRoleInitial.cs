@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchMvc.Domain.Account
+namespace CleanArchMvc.Infra.Data.Identity
 {
-    public interface ISeedUserRoleInitial
+    internal class SeedUserRoleInitial
     {
-
     }
 }

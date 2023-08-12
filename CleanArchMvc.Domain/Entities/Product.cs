@@ -30,7 +30,6 @@ namespace CleanArchMvc.Domain.Entities
             CategoryId = categoryId;
         }
 
-
         private void ValidateDomain(string name, string description, decimal price, int stock, string image)
         {
             DomainExceptionValidation.When(string.IsNullOrEmpty(name), 
