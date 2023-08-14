@@ -22,9 +22,7 @@ namespace CleanArchMvc.API.Controllers
         {
             var categories = await _categoryService.GetCategories();
             if (categories == null)
-            {
                 return NotFound("Categories not found!");
-            }
             
             return Ok(categories);
         }
@@ -34,9 +32,7 @@ namespace CleanArchMvc.API.Controllers
         {
             var category = await _categoryService.GetById(id);
             if (category == null)
-            {
                 return NotFound("Category not found!");
-            }
             
             return Ok(category);
         }
@@ -45,9 +41,7 @@ namespace CleanArchMvc.API.Controllers
         public async Task<ActionResult> Post([FromBody] CategoryDTO categoryDTO)
         {
             if (categoryDTO == null)
-            {
                 return BadRequest();
-            }
             
             await _categoryService.Add(categoryDTO);
 
@@ -73,9 +67,7 @@ namespace CleanArchMvc.API.Controllers
         {
             var category = await _categoryService.GetById(id);
             if (category == null)
-            {
                 return NotFound("Category not found!");
-            }
 
             await _categoryService.Remove(category.Id);
 
