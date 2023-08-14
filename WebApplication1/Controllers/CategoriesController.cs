@@ -1,6 +1,5 @@
 ﻿using CleanArchMvc.Application.DTOs;
 using CleanArchMvc.Application.Interfaces;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -69,7 +68,7 @@ namespace CleanArchMvc.API.Controllers
             if (category == null)
                 return NotFound("Category not found!");
 
-            await _categoryService.Remove(category.Id);
+            await _categoryService.Remove(id);
 
             return Ok(category);
         }

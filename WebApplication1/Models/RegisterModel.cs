@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CleanArchMvc.WebUI.ViewModels
+namespace CleanArchMvc.API.Models
 {
-    public class RegisterViewModel
+    public class RegisterModel
     {
         [Required]
         [EmailAddress]
@@ -15,6 +15,6 @@ namespace CleanArchMvc.WebUI.ViewModels
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
         [Compare("Password", ErrorMessage = "Password dont´t match")]
-        public string ConfirmPassword { get; set;}
+        public string ConfirmPassword { get; set; }
     }
 }
