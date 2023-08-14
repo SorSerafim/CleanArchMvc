@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace CleanArchMvc.WebUI
+namespace WebApplication1
 {
     public class Program
     {
